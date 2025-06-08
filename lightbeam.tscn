@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlu1mfva4wos5"]
+
+[ext_resource type="Script" path="res://lightbeam.gd" id="1_grb2k"]
+
+[node name="ligthbeam" type="Node2D" groups=["Mirrors"]]
+script = ExtResource("1_grb2k")
+
+[node name="RayCast2D" type="RayCast2D" parent="." groups=["Mirrors"]]
+target_position = Vector2(29, 0)
+collision_mask = 7
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(-4, 0)

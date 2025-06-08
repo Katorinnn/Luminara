@@ -1,0 +1,171 @@
+[gd_scene load_steps=3 format=3 uid="uid://u7ke5qg5oy5j"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_s5oxk"]
+[ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/DUNGRG__.TTF" id="2_ud6oy"]
+
+[node name="UI_PAUSE" type="CanvasLayer"]
+scale = Vector2(4.05241, 4.05241)
+transform = Transform2D(4.05241, 0, 0, 4.05241, 0, 0)
+script = ExtResource("1_s5oxk")
+
+[node name="pause" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="pause"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.239216)
+
+[node name="Label" type="Label" parent="pause/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 144.0
+offset_right = 71.5
+offset_bottom = 229.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ud6oy")
+theme_override_font_sizes/font_size = 70
+text = "Paused
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="pause/ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_top = -496.0
+offset_right = 185.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause/ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 53.0
+offset_right = -24.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="restart" type="Button" parent="pause/ColorRect/Panel/VBoxContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 3
+text = "Restart"
+
+[node name="continue" type="Button" parent="pause/ColorRect/Panel/VBoxContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue
+"
+
+[node name="howtoplay" type="Button" parent="pause/ColorRect/Panel/VBoxContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 3
+text = "How to Play"
+
+[node name="quit" type="Button" parent="pause/ColorRect/Panel/VBoxContainer"]
+z_index = 2
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit
+"
+
+[node name="failed" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="failed"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.239216)
+
+[node name="Label" type="Label" parent="failed/ColorRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.5
+offset_top = 144.0
+offset_right = 71.5
+offset_bottom = 229.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ud6oy")
+theme_override_font_sizes/font_size = 70
+text = "Failed
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="failed/ColorRect2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_top = -496.0
+offset_right = 185.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="failed/ColorRect2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 53.0
+offset_right = -24.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="restart" type="Button" parent="failed/ColorRect2/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Restart
+"
+
+[node name="continue" type="Button" parent="failed/ColorRect2/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue"
+
+[node name="mainmenu" type="Button" parent="failed/ColorRect2/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Main Menu
+"
+
+[node name="quit" type="Button" parent="failed/ColorRect2/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit
+"
+
+[connection signal="pressed" from="pause/ColorRect/Panel/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="pause/ColorRect/Panel/VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="pause/ColorRect/Panel/VBoxContainer/howtoplay" to="." method="_on_howtoplay_pressed"]
+[connection signal="pressed" from="pause/ColorRect/Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="failed/ColorRect2/Panel/VBoxContainer/restart" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="failed/ColorRect2/Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bim6qjseby17y"]
+
+[ext_resource type="Script" path="res://mirror.gd" id="1_6r60f"]
+[ext_resource type="Texture2D" uid="uid://enakg5t4k05f" path="res://assets/mirr.png" id="1_mt68c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ktyt"]
+size = Vector2(23.5517, 6.60162)
+
+[node name="Mirror" type="Area2D" groups=["Player"]]
+scale = Vector2(3.96311, 3.96311)
+collision_layer = 5
+collision_mask = 3
+monitorable = false
+script = ExtResource("1_6r60f")
+
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+z_index = 1
+rotation = 0.785398
+scale = Vector2(1.23092, 1.23092)
+texture = ExtResource("1_mt68c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.0630792, -0.0630837)
+rotation = -2.35619
+scale = Vector2(1.4991, 1.4991)
+shape = SubResource("RectangleShape2D_6ktyt")
+
+[node name="HintLabel" type="Label" parent="." groups=["Player"]]
+z_index = 1
+offset_left = -22.7094
+offset_top = 11.8594
+offset_right = 17.2906
+offset_bottom = 34.8594
+theme_override_font_sizes/font_size = 10
+text = "
+"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvp68k0tocnrg"]
+
+[ext_resource type="Texture2D" uid="uid://6m6d5u55lyg" path="res://assets/pause.png" id="1_bavot"]
+[ext_resource type="Texture2D" uid="uid://dkvi6u5w5uel" path="res://assets/sheet_black1x.png" id="1_cft5v"]
+[ext_resource type="Script" path="res://game_manager.gd" id="1_hann8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bab61"]
+atlas = ExtResource("1_cft5v")
+region = Rect2(204, 357, 51, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ceac3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bab61")
+}],
+"loop": true,
+"name": &"home",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxgtx"]
+atlas = ExtResource("1_cft5v")
+region = Rect2(255, 51, 51, 51)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1pwt"]
+atlas = ExtResource("1_cft5v")
+region = Rect2(255, 0, 51, 51)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6mcv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxgtx")
+}],
+"loop": true,
+"name": &"sound_off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1pwt")
+}],
+"loop": true,
+"name": &"sound_on",
+"speed": 5.0
+}]
+
+[node name="Game Manager" type="Node"]
+process_mode = 3
+script = ExtResource("1_hann8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -33.0
+offset_top = 11.0
+offset_right = 7.0
+offset_bottom = 51.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="pause" type="Button" parent="CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+icon = ExtResource("1_bavot")
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/HBoxContainer"]
+position = Vector2(1260, 40)
+sprite_frames = SubResource("SpriteFrames_ceac3")
+animation = &"home"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(35, 26)
+sprite_frames = SubResource("SpriteFrames_w6mcv")
+animation = &"sound_off"
+
+[connection signal="pressed" from="CanvasLayer/Control/HBoxContainer/pause" to="." method="_on_pause_pressed"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://camnpn2hdhccg"]
+
+[ext_resource type="Texture2D" uid="uid://bkq7myik045u3" path="res://chest.png" id="1_2qtac"]
+[ext_resource type="Script" path="res://scripts/chest.gd" id="1_jw8ex"]
+[ext_resource type="PackedScene" uid="uid://djcx6f37xmtds" path="res://scenes/mirror.tscn" id="3_r0ulk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq4ul"]
+atlas = ExtResource("1_2qtac")
+region = Rect2(0, 0, 30, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4cxx"]
+atlas = ExtResource("1_2qtac")
+region = Rect2(0, 29, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t33da"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq4ul")
+}],
+"loop": false,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq4ul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4cxx")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfqw7"]
+size = Vector2(30, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiqct"]
+size = Vector2(38, 15)
+
+[node name="chest" type="Area2D"]
+collision_mask = 4
+script = ExtResource("1_jw8ex")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_t33da")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_qfqw7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_oiqct")
+debug_color = Color(0, 0, 0, 0.42)
+
+[node name="mirror" parent="." instance=ExtResource("3_r0ulk")]
+scale = Vector2(1.04198, 0.951615)

@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1yonsip48hnp"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_p0avr"]
+[ext_resource type="Texture2D" uid="uid://dmdylaggenodd" path="res://assets/Background.png" id="1_pslup"]
+[ext_resource type="Texture2D" uid="uid://c65v65ffc0e7a" path="res://assets/button_rectangle_depth_gradient.png" id="2_1xbre"]
+[ext_resource type="Texture2D" uid="uid://2nunvmsc0w5w" path="res://assets/button_rectangle_depth_line.png" id="3_abrmt"]
+[ext_resource type="Texture2D" uid="uid://dcolld32uoscv" path="res://assets/button_rectangle_depth_gloss.png" id="4_cnu60"]
+[ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/DUNGRG__.TTF" id="5_cgy6h"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 258.0
+scale = Vector2(2.80047, 2.80047)
+script = ExtResource("1_p0avr")
+
+[node name="Screenshot2025-05-27181652" type="Sprite2D" parent="."]
+modulate = Color(0.955418, 0.821443, 0.688981, 0.847059)
+self_modulate = Color(0.940708, 0.577581, 0.414446, 1)
+position = Vector2(212, 127)
+scale = Vector2(1.59699, 1.76823)
+texture = ExtResource("1_pslup")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.8165
+offset_top = 5.26317
+offset_right = 145.184
+offset_bottom = 205.263
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.518827, 0.446835)
+
+[node name="startBtn" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+button_mask = 5
+texture_normal = ExtResource("2_1xbre")
+texture_pressed = ExtResource("3_abrmt")
+texture_hover = ExtResource("4_cnu60")
+
+[node name="Label" type="Label" parent="VBoxContainer/startBtn"]
+layout_mode = 0
+offset_left = 72.9546
+offset_top = 18.3802
+offset_right = 112.955
+offset_bottom = 41.3802
+theme_override_colors/font_color = Color(0, 0, 0, 0.839216)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.686275)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Start
+"
+
+[node name="optionBtn" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_1xbre")
+texture_pressed = ExtResource("3_abrmt")
+texture_hover = ExtResource("4_cnu60")
+
+[node name="Label" type="Label" parent="VBoxContainer/optionBtn"]
+layout_mode = 0
+offset_left = 72.9546
+offset_top = 18.3802
+offset_right = 126.955
+offset_bottom = 41.3802
+theme_override_colors/font_color = Color(0, 0, 0, 0.839216)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.686275)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Option"
+
+[node name="exitBtn" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_1xbre")
+texture_pressed = ExtResource("3_abrmt")
+texture_hover = ExtResource("4_cnu60")
+
+[node name="Label" type="Label" parent="VBoxContainer/exitBtn"]
+layout_mode = 0
+offset_left = 72.9546
+offset_top = 18.3802
+offset_right = 112.955
+offset_bottom = 41.3802
+theme_override_colors/font_color = Color(0, 0, 0, 0.839216)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.686275)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Quit"
+
+[node name="GameName" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.9506
+offset_top = 47.492
+offset_right = 102.049
+offset_bottom = 132.492
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("5_cgy6h")
+theme_override_font_sizes/font_size = 70
+text = "Luminara"
+
+[connection signal="pressed" from="VBoxContainer/startBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/optionBtn" to="." method="_on_option_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/exitBtn" to="." method="_on_exit_btn_pressed"]
