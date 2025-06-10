@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scripts/lightbeam.gd" id="1_ms7eo"]
 
 [node name="ligthbeam" type="Node2D"]
+z_index = 1
 script = ExtResource("1_ms7eo")
 
 [node name="RayCast2D" type="RayCast2D" parent="." groups=["lightbeam"]]

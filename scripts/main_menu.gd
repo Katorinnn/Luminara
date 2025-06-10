@@ -1,21 +1,23 @@
 extends Control
 
+var menu_fadeout = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_start_btn_pressed() -> void:
+
+	for i in range(15):
+		set_modulate(lerp(get_modulate(), Color(1, 1, 1, 0), 0.4))
+		await get_tree().create_timer(0.05).timeout
+
 	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
-
 func _on_option_btn_pressed() -> void:
-	pass # Replace with function body.
+	pass 
 
 
 func _on_exit_btn_pressed() -> void:

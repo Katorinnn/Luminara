@@ -1,13 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://bim6qjseby17y"]
 
 [ext_resource type="Script" path="res://scripts/mirror.gd" id="1_6r60f"]
-[ext_resource type="Texture2D" uid="uid://enakg5t4k05f" path="res://assets/UI/mirr.png" id="1_mt68c"]
+[ext_resource type="Texture2D" uid="uid://enakg5t4k05f" path="res://Icons/others/mirr.png" id="1_mt68c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ktyt"]
 size = Vector2(23.5517, 6.60162)
 
-[node name="Mirror" type="StaticBody2D" groups=["Mirror", "Player"]]
+[node name="Mirror" type="Area2D" groups=["Mirror", "Player"]]
+z_index = 1
 scale = Vector2(3.96311, 3.96311)
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_6r60f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

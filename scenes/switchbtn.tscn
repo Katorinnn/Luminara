@@ -1,15 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://w2srpx5d0sm7"]
+[gd_scene load_steps=6 format=3 uid="uid://w2srpx5d0sm7"]
 
 [ext_resource type="Script" path="res://scripts/switch.gd" id="1_7r8ru"]
-[ext_resource type="Texture2D" uid="uid://b3wok8jy75b6p" path="res://assets/UI/circle_02.png" id="2_83n4r"]
-[ext_resource type="Texture2D" uid="uid://cb7cpphdljmpg" path="res://assets/UI/circle_05.png" id="3_6d5jc"]
+[ext_resource type="Texture2D" uid="uid://b3wok8jy75b6p" path="res://Icons/circl/circle_02.png" id="2_83n4r"]
+[ext_resource type="Texture2D" uid="uid://cb7cpphdljmpg" path="res://Icons/circl/circle_05.png" id="3_6d5jc"]
+[ext_resource type="AudioStream" uid="uid://sr5q7xxedypw" path="res://assets/SFX/switch_006.ogg" id="4_i5ry4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sknfu"]
 
-[node name="switchBtn" type="Area2D"]
-collision_layer = 2
-collision_mask = 7
+[node name="switchBtn" type="Area2D" groups=["Player"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_7r8ru")
+target_mirror = NodePath(".")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2.16551, 0.965056)
@@ -22,3 +25,10 @@ texture = ExtResource("2_83n4r")
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 scale = Vector2(0.15963, 0.0626923)
 texture = ExtResource("3_6d5jc")
+
+[node name="HintLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="toggleSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_i5ry4")

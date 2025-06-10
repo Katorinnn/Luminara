@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cga6dx0vaaw7l"]
+
+[ext_resource type="AudioStream" uid="uid://c6siscpjimrpr" path="res://assets/Audio/Known.wav" id="1_cb4e2"]
+
+[node name="bgm" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_cb4e2")
+volume_db = -22.69
+autoplay = true

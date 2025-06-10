@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1yonsip48hnp"]
+[gd_scene load_steps=8 format=3 uid="uid://d1yonsip48hnp"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_p0avr"]
-[ext_resource type="Texture2D" uid="uid://dmdylaggenodd" path="res://assets/UI/bgBtn/Background.png" id="1_pslup"]
-[ext_resource type="Texture2D" uid="uid://c65v65ffc0e7a" path="res://assets/UI/bgBtn/button_rectangle_depth_gradient.png" id="2_1xbre"]
-[ext_resource type="Texture2D" uid="uid://2nunvmsc0w5w" path="res://assets/UI/bgBtn/button_rectangle_depth_line.png" id="3_abrmt"]
-[ext_resource type="Texture2D" uid="uid://dcolld32uoscv" path="res://assets/UI/bgBtn/button_rectangle_depth_gloss.png" id="4_cnu60"]
+[ext_resource type="Texture2D" uid="uid://dmdylaggenodd" path="res://assets/bgBtn/Background.png" id="1_pslup"]
+[ext_resource type="Texture2D" uid="uid://c65v65ffc0e7a" path="res://assets/bgBtn/button_rectangle_depth_gradient.png" id="2_1xbre"]
+[ext_resource type="Texture2D" uid="uid://2nunvmsc0w5w" path="res://assets/bgBtn/button_rectangle_depth_line.png" id="3_abrmt"]
+[ext_resource type="Texture2D" uid="uid://dcolld32uoscv" path="res://assets/bgBtn/button_rectangle_depth_gloss.png" id="4_cnu60"]
 [ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/fonts/DUNGRG__.TTF" id="5_cgy6h"]
+[ext_resource type="AudioStream" uid="uid://c6siscpjimrpr" path="res://assets/Audio/Known.wav" id="7_xxmh8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -137,6 +138,9 @@ grow_horizontal = 2
 theme_override_fonts/font = ExtResource("5_cgy6h")
 theme_override_font_sizes/font_size = 70
 text = "Luminara"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_xxmh8")
 
 [connection signal="pressed" from="VBoxContainer/startBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/optionBtn" to="." method="_on_option_btn_pressed"]

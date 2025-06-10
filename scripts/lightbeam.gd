@@ -2,15 +2,15 @@ extends Node2D
 
 @onready var line: Line2D = $Line2D
 
-const MAX_BOUNCES: int = 10
+const MAX_BOUNCES = 10
+var door_opened = false
 
 func _ready():
-	# Create gradient from yellow to transparent
-	var gradient := Gradient.new()
-	gradient.add_point(0.0, Color(1, 1, 0.75, 1.0))  # Opaque yellow
-	gradient.add_point(1.0, Color(1, 1, 0.75, 0.0))  # Transparent
+	var gradient = Gradient.new()
+	gradient.add_point(0.0, Color(1, 1, 0.75, 1.0))
+	gradient.add_point(1.0, Color(1, 1, 0.75, 0.0))
 
-	var grad_texture := GradientTexture2D.new()
+	var grad_texture = GradientTexture2D.new()
 	grad_texture.gradient = gradient
 	grad_texture.width = 256
 
@@ -37,7 +37,6 @@ func draw_beam(origin: Vector2, direction: Vector2):
 		query.to = current_pos + current_dir * 1000
 		query.collide_with_areas = true
 		query.collide_with_bodies = true
-		query.collision_mask = 0xFFFFFFFF  # Check all layers
 
 		var result = space_state.intersect_ray(query)
 
@@ -48,14 +47,36 @@ func draw_beam(origin: Vector2, direction: Vector2):
 
 			line.add_point(to_local(collision_point))
 
-			# Reflect only off mirrors
-			if collider.is_in_group("Mirror"):
+			if collider.is_in_group("Endpoint"):
+				open_door()
+				
+				# Notify main scene to stop the timer
+				var main_node = get_tree().current_scene  # Or use explicit node path
+				if main_node.has_method("finish_game"):
+					main_node.finish_game()
+
+				break
+			elif collider.is_in_group("Mirror"):
 				current_dir = current_dir.bounce(normal).normalized()
-				current_pos = collision_point + current_dir * 1.0  # Avoid self-intersection
+				current_pos = collision_point + current_dir * 1.0
 				bounces += 1
 			else:
 				break
 		else:
-			var end_point = current_pos + current_dir * 1000
-			line.add_point(to_local(end_point))
+			line.add_point(to_local(current_pos + current_dir * 1000))
 			break
+
+func open_door():
+	if door_opened:
+		return
+	door_opened = true
+
+	for door in get_tree().get_nodes_in_group("Door"):
+		var anim_player = door.get_node_or_null("AnimationPlayer")
+		if anim_player:
+			anim_player.play("open_door")
+
+		var portal = door.get_node_or_null("Portal")
+		if portal and portal is Area2D:
+			portal.set_deferred("monitoring", true)
+			portal.set_deferred("monitorable", true)
