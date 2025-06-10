@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlu1mfva4wos5"]
+
+[ext_resource type="Script" path="res://scripts/lightbeam.gd" id="1_ms7eo"]
+
+[node name="ligthbeam" type="Node2D"]
+script = ExtResource("1_ms7eo")
+
+[node name="RayCast2D" type="RayCast2D" parent="." groups=["lightbeam"]]
+target_position = Vector2(0, 28)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(-4, 0)
+width = 8.0

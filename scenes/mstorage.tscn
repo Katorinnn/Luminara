@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyvhyneq26tr6"]
+
+[ext_resource type="Script" path="res://scripts/MirrorUI.gd" id="1_384lg"]
+[ext_resource type="PackedScene" uid="uid://bim6qjseby17y" path="res://scenes/Mirror.tscn" id="3_1qj3w"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_384lg")
+
+[node name="Mirror" parent="." instance=ExtResource("3_1qj3w")]
+position = Vector2(36, 25)
+scale = Vector2(1.40567, 1.40567)

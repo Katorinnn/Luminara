@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bkq7myik045u3" path="res://chest.png" id="1_2qtac"]
 [ext_resource type="Script" path="res://scripts/chest.gd" id="1_jw8ex"]
-[ext_resource type="PackedScene" uid="uid://djcx6f37xmtds" path="res://scenes/mirror.tscn" id="3_r0ulk"]
+[ext_resource type="PackedScene" uid="uid://djcx6f37xmtds" path="res://scenes/mOLD.tscn" id="3_r0ulk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kq4ul"]
 atlas = ExtResource("1_2qtac")

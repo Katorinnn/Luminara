@@ -35,16 +35,22 @@ func _physics_process(delta: float) -> void:
 		_interact()
 
 	# Check equip input (Q).
-	if Input.is_action_just_pressed("equip"):
-		_toggle_equipped()
-
+	if Input.is_action_just_pressed("detach"):
+		_toggle_detach()
+	
+	if Input.is_action_just_pressed("attach"):
+		_toggle_attach()
+	
 	# Apply movement.
 	move_and_slide()
 
 func _interact():
 	pass
 
-func _toggle_equipped():
+func _toggle_detach():
+	pass
+	
+func _toggle_attach():
 	pass
 	
 func collect_mirror(mirror_node):

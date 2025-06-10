@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw5w20dqcefux"]
+
+[ext_resource type="Texture2D" uid="uid://b3wok8jy75b6p" path="res://assets/circle_02.png" id="1_2hi1j"]
+[ext_resource type="Script" path="res://scripts/connector.gd" id="1_jg6x2"]
+[ext_resource type="Texture2D" uid="uid://db5kkcvdxamqa" path="res://assets/circle_04.png" id="3_r7apl"]
+[ext_resource type="Texture2D" uid="uid://cb7cpphdljmpg" path="res://assets/circle_05.png" id="4_wdga0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7tkk6"]
+radius = 18.3903
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_twy2u"]
+radius = 35.1283
+
+[node name="Connector" type="Area2D" groups=["Player"]]
+z_index = 1
+scale = Vector2(0.372031, 0.372031)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_jg6x2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.124355, 0.124355)
+texture = ExtResource("1_2hi1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.85996, 1.85996)
+shape = SubResource("CircleShape2D_7tkk6")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_twy2u")
+debug_color = Color(0.898082, 0.314813, 0, 0.42)
+
+[node name="HintLabel" type="Label" parent="Area2D"]
+offset_right = 40.0
+offset_bottom = 69.0
+scale = Vector2(1, 0.985084)
+theme_override_font_sizes/font_size = 20
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -37.6313
+offset_top = -37.6313
+offset_right = 474.369
+offset_bottom = 474.369
+scale = Vector2(0.149123, 0.149123)
+texture = ExtResource("3_r7apl")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -18.8156
+offset_top = -18.8156
+offset_right = 493.184
+offset_bottom = 493.184
+scale = Vector2(0.0729066, 0.0729066)
+texture = ExtResource("4_wdga0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

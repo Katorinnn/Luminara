@@ -1,60 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://djcx6f37xmtds"]
+[gd_scene load_steps=4 format=3 uid="uid://bim6qjseby17y"]
 
-[ext_resource type="Script" path="res://scripts/mirror.gd" id="1_1bxab"]
-[ext_resource type="Texture2D" uid="uid://cqgba235vhjwy" path="res://assets/a1/Top-Down_Retro_Interior/cmirror2.png" id="2_8e7ww"]
+[ext_resource type="Script" path="res://scripts/mirror.gd" id="1_6r60f"]
+[ext_resource type="Texture2D" uid="uid://enakg5t4k05f" path="res://assets/mirr.png" id="1_mt68c"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n40iq"]
-radius = 7.0
-height = 22.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ktyt"]
+size = Vector2(23.5517, 6.60162)
 
-[sub_resource type="Animation" id="Animation_y15qm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_l0bgo"]
-resource_name = "pop"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.466667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, -39)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_2x34e"]
-_data = {
-"RESET": SubResource("Animation_y15qm"),
-"pop": SubResource("Animation_l0bgo")
-}
-
-[node name="mirror" type="Area2D"]
-scale = Vector2(2.1024, 2.1024)
-script = ExtResource("1_1bxab")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("2_8e7ww")
+[node name="Mirror" type="StaticBody2D" groups=["Mirror", "Player"]]
+scale = Vector2(3.96311, 3.96311)
+script = ExtResource("1_6r60f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_n40iq")
+position = Vector2(0.0630792, -0.0630837)
+rotation = -2.35619
+scale = Vector2(0.937695, 0.684483)
+shape = SubResource("RectangleShape2D_6ktyt")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_2x34e")
-}
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
+z_index = 1
+rotation = 0.785398
+scale = Vector2(1.23092, 1.23092)
+texture = ExtResource("1_mt68c")
+
+[node name="HintLabel" type="Label" parent="." groups=["Player"]]
+z_index = 1
+offset_left = -22.7094
+offset_top = 11.8594
+offset_right = 17.2906
+offset_bottom = 34.8594
+theme_override_font_sizes/font_size = 10
+text = "
+"
