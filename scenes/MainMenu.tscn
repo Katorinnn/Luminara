@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1yonsip48hnp"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_p0avr"]
-[ext_resource type="Texture2D" uid="uid://dmdylaggenodd" path="res://assets/Background.png" id="1_pslup"]
-[ext_resource type="Texture2D" uid="uid://c65v65ffc0e7a" path="res://assets/button_rectangle_depth_gradient.png" id="2_1xbre"]
-[ext_resource type="Texture2D" uid="uid://2nunvmsc0w5w" path="res://assets/button_rectangle_depth_line.png" id="3_abrmt"]
-[ext_resource type="Texture2D" uid="uid://dcolld32uoscv" path="res://assets/button_rectangle_depth_gloss.png" id="4_cnu60"]
-[ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/DUNGRG__.TTF" id="5_cgy6h"]
+[ext_resource type="Texture2D" uid="uid://dmdylaggenodd" path="res://assets/UI/bgBtn/Background.png" id="1_pslup"]
+[ext_resource type="Texture2D" uid="uid://c65v65ffc0e7a" path="res://assets/UI/bgBtn/button_rectangle_depth_gradient.png" id="2_1xbre"]
+[ext_resource type="Texture2D" uid="uid://2nunvmsc0w5w" path="res://assets/UI/bgBtn/button_rectangle_depth_line.png" id="3_abrmt"]
+[ext_resource type="Texture2D" uid="uid://dcolld32uoscv" path="res://assets/UI/bgBtn/button_rectangle_depth_gloss.png" id="4_cnu60"]
+[ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/fonts/DUNGRG__.TTF" id="5_cgy6h"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

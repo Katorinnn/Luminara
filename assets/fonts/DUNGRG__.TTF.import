@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cyxb012guiy5q"
-path="res://.godot/imported/DUNGRG__.TTF-48e13cf40f07cc8888f6da1d83d6226b.fontdata"
+path="res://.godot/imported/DUNGRG__.TTF-1bc8be33073e67b42aa763cee168346e.fontdata"
 
 [deps]
 
-source_file="res://assets/DUNGRG__.TTF"
-dest_files=["res://.godot/imported/DUNGRG__.TTF-48e13cf40f07cc8888f6da1d83d6226b.fontdata"]
+source_file="res://assets/fonts/DUNGRG__.TTF"
+dest_files=["res://.godot/imported/DUNGRG__.TTF-1bc8be33073e67b42aa763cee168346e.fontdata"]
 
 [params]
 

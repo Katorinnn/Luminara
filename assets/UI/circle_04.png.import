@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://enakg5t4k05f"
-path="res://.godot/imported/mirr.png-2d486bf9c1be12d9eeb74571a278f923.ctex"
+uid="uid://db5kkcvdxamqa"
+path="res://.godot/imported/circle_04.png-5d30e38adc952ac144587a0bd1f88c66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mirr.png"
-dest_files=["res://.godot/imported/mirr.png-2d486bf9c1be12d9eeb74571a278f923.ctex"]
+source_file="res://assets/UI/circle_04.png"
+dest_files=["res://.godot/imported/circle_04.png-5d30e38adc952ac144587a0bd1f88c66.ctex"]
 
 [params]
 

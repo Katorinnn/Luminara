@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6m6d5u55lyg"
-path="res://.godot/imported/pause.png-d497048eb98995ab9a2a1bb8927ffe58.ctex"
+uid="uid://c081koajgb4m"
+path="res://.godot/imported/Black-DemonPNG.png-3fc4bf5b4c0b6f58b30f1ce89784b554.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pause.png"
-dest_files=["res://.godot/imported/pause.png-d497048eb98995ab9a2a1bb8927ffe58.ctex"]
+source_file="res://assets/UI/Player/Black-DemonPNG.png"
+dest_files=["res://.godot/imported/Black-DemonPNG.png-3fc4bf5b4c0b6f58b30f1ce89784b554.ctex"]
 
 [params]
 

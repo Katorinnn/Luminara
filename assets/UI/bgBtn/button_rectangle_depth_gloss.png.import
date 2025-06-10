@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck2771bnwniyq"
-path="res://.godot/imported/circle_03.png-9371831c57ae0287c85df567e912386c.ctex"
+uid="uid://dcolld32uoscv"
+path="res://.godot/imported/button_rectangle_depth_gloss.png-0a1230f82d804cf36faa581d2dc8b145.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/circle_03.png"
-dest_files=["res://.godot/imported/circle_03.png-9371831c57ae0287c85df567e912386c.ctex"]
+source_file="res://assets/UI/bgBtn/button_rectangle_depth_gloss.png"
+dest_files=["res://.godot/imported/button_rectangle_depth_gloss.png-0a1230f82d804cf36faa581d2dc8b145.ctex"]
 
 [params]
 

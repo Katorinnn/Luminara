@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=4 uid="uid://d3ulnbu3nj8dq"]
 
-[ext_resource type="Texture2D" uid="uid://di8kernmp1llw" path="res://assets/floor.png" id="1_pwy23"]
-[ext_resource type="Texture2D" uid="uid://shgrd0xoihsb" path="res://assets/Screenshot 2025-05-27 181652.png" id="2_ehi0n"]
+[ext_resource type="Texture2D" uid="uid://di8kernmp1llw" path="res://assets/UI/floor.png" id="1_pwy23"]
+[ext_resource type="Texture2D" uid="uid://shgrd0xoihsb" path="res://assets/UI/Screenshot 2025-05-27 181652.png" id="2_ehi0n"]
 [ext_resource type="Texture2D" uid="uid://c6lnd2ffgwtl4" path="res://assets/a1/interior/living room/33.png" id="3_6jdp5"]
 [ext_resource type="Texture2D" uid="uid://b8f7btwmymg0l" path="res://assets/a1/interior/living room/Chris and.png" id="4_84lxk"]
 [ext_resource type="Texture2D" uid="uid://fpyweftmvp6q" path="res://assets/a1/interior/living room/tilesheet_itchio.png" id="5_gn4ay"]

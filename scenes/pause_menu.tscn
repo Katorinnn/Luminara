@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://u7ke5qg5oy5j"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_s5oxk"]
-[ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/DUNGRG__.TTF" id="2_ud6oy"]
+[ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/fonts/DUNGRG__.TTF" id="2_ud6oy"]
 
 [node name="UI_PAUSE" type="CanvasLayer"]
 scale = Vector2(4.05241, 4.05241)

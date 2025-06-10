@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://shgrd0xoihsb"
-path="res://.godot/imported/Screenshot 2025-05-27 181652.png-ab20415529a6c0d4d470ad59934bc7c6.ctex"
+uid="uid://cb7cpphdljmpg"
+path="res://.godot/imported/circle_05.png-71f8e546f3dc7b2c86795d3154860056.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Screenshot 2025-05-27 181652.png"
-dest_files=["res://.godot/imported/Screenshot 2025-05-27 181652.png-ab20415529a6c0d4d470ad59934bc7c6.ctex"]
+source_file="res://assets/UI/circle_05.png"
+dest_files=["res://.godot/imported/circle_05.png-71f8e546f3dc7b2c86795d3154860056.ctex"]
 
 [params]
 

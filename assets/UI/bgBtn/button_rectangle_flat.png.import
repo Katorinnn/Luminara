@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c081koajgb4m"
-path="res://.godot/imported/Black-DemonPNG.png-b388f07624414fbfdef1a7a2e16f34d3.ctex"
+uid="uid://dcb4yi78wvqbk"
+path="res://.godot/imported/button_rectangle_flat.png-0b0cfac1597160134a31a8be01a9fb94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Black-DemonPNG.png"
-dest_files=["res://.godot/imported/Black-DemonPNG.png-b388f07624414fbfdef1a7a2e16f34d3.ctex"]
+source_file="res://assets/UI/bgBtn/button_rectangle_flat.png"
+dest_files=["res://.godot/imported/button_rectangle_flat.png-0b0cfac1597160134a31a8be01a9fb94.ctex"]
 
 [params]
 

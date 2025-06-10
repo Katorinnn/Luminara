@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb7cpphdljmpg"
-path="res://.godot/imported/circle_05.png-a4e3176c0f3d7d0c0d8d1e324b2151eb.ctex"
+uid="uid://enakg5t4k05f"
+path="res://.godot/imported/mirr.png-ee8762871ec7eb0dd9c5525d73ebc845.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/circle_05.png"
-dest_files=["res://.godot/imported/circle_05.png-a4e3176c0f3d7d0c0d8d1e324b2151eb.ctex"]
+source_file="res://assets/UI/mirr.png"
+dest_files=["res://.godot/imported/mirr.png-ee8762871ec7eb0dd9c5525d73ebc845.ctex"]
 
 [params]
 

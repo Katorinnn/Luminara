@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvp68k0tocnrg"]
 
-[ext_resource type="Texture2D" uid="uid://6m6d5u55lyg" path="res://assets/pause.png" id="1_bavot"]
-[ext_resource type="Texture2D" uid="uid://dkvi6u5w5uel" path="res://assets/sheet_black1x.png" id="1_cft5v"]
+[ext_resource type="Texture2D" uid="uid://6m6d5u55lyg" path="res://assets/UI/pause.png" id="1_bavot"]
+[ext_resource type="Texture2D" uid="uid://dkvi6u5w5uel" path="res://assets/UI/sheet_black1x.png" id="1_cft5v"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_hann8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bab61"]

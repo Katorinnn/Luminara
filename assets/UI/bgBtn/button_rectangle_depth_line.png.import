@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkq7myik045u3"
-path="res://.godot/imported/chest.png-9e490aafea209e3940cdee9d07dd30a9.ctex"
+uid="uid://2nunvmsc0w5w"
+path="res://.godot/imported/button_rectangle_depth_line.png-bdb554cf24b13c650550bd2bdb8cdf95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chest.png"
-dest_files=["res://.godot/imported/chest.png-9e490aafea209e3940cdee9d07dd30a9.ctex"]
+source_file="res://assets/UI/bgBtn/button_rectangle_depth_line.png"
+dest_files=["res://.godot/imported/button_rectangle_depth_line.png-bdb554cf24b13c650550bd2bdb8cdf95.ctex"]
 
 [params]
 

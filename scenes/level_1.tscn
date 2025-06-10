@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=4 uid="uid://dm6cfmtg1ar0"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_0tsmc"]
-[ext_resource type="Texture2D" uid="uid://di8kernmp1llw" path="res://assets/floor.png" id="1_6du2x"]
+[ext_resource type="Texture2D" uid="uid://di8kernmp1llw" path="res://assets/UI/floor.png" id="1_6du2x"]
 [ext_resource type="PackedScene" uid="uid://bim6qjseby17y" path="res://scenes/Mirror.tscn" id="2_nl4es"]
 [ext_resource type="PackedScene" uid="uid://c5t4pfcciqur3" path="res://scenes/Player.tscn" id="3_2e4c8"]
 [ext_resource type="PackedScene" uid="uid://dlu1mfva4wos5" path="res://scenes/lightbeam.tscn" id="5_io651"]
-[ext_resource type="Texture2D" uid="uid://cb7cpphdljmpg" path="res://assets/circle_05.png" id="6_gf0s2"]
+[ext_resource type="Texture2D" uid="uid://cb7cpphdljmpg" path="res://assets/UI/circle_05.png" id="6_gf0s2"]
 [ext_resource type="PackedScene" uid="uid://cw5w20dqcefux" path="res://scenes/connector.tscn" id="8_ih4wt"]
 [ext_resource type="PackedScene" uid="uid://cnelsw307vfki" path="res://scenes/guide.tscn" id="8_w36fp"]
 [ext_resource type="PackedScene" uid="uid://cvp68k0tocnrg" path="res://scenes/game_manager.tscn" id="9_3ggvk"]
