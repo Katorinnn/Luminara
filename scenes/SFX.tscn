@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx62xypbrsc0t"]
+
+[ext_resource type="AudioStream" uid="uid://devh4lstege7" path="res://assets/SFX/click_003.ogg" id="1_v7j8e"]
+[ext_resource type="AudioStream" uid="uid://dr0gc47ia8itj" path="res://assets/SFX/minimize_008.ogg" id="2_okpwk"]
+
+[node name="SFX" type="CanvasLayer"]
+
+[node name="clickSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_v7j8e")
+
+[node name="hoverSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_okpwk")
+volume_db = 24.0

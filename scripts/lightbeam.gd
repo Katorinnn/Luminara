@@ -5,6 +5,7 @@ extends Node2D
 const MAX_BOUNCES = 10
 var door_opened = false
 
+
 func _ready():
 	var gradient = Gradient.new()
 	gradient.add_point(0.0, Color(1, 1, 0.75, 1.0))
@@ -70,11 +71,26 @@ func open_door():
 	if door_opened:
 		return
 	door_opened = true
+	
+	var scene_name = get_tree().current_scene.name
+	print("Scene name:", scene_name)
+
+	var anim_name = "open_door"
+	if scene_name == "Level2":
+		anim_name = "open_horizontal"
+	elif scene_name == "Level3":
+		anim_name = "open_slide"
+	
+	print("Animation to play:", anim_name)
 
 	for door in get_tree().get_nodes_in_group("Door"):
 		var anim_player = door.get_node_or_null("AnimationPlayer")
 		if anim_player:
-			anim_player.play("open_door")
+			print("Found AnimationPlayer in:", door.name)
+			print("Available animations:", anim_player.get_animation_list())
+			anim_player.play(anim_name)
+		else:
+			print("No AnimationPlayer found in:", door.name)
 
 		var portal = door.get_node_or_null("Portal")
 		if portal and portal is Area2D:

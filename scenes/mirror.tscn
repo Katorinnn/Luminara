@@ -8,7 +8,7 @@ size = Vector2(23.5517, 6.60162)
 
 [node name="Mirror" type="Area2D" groups=["Mirror", "Player"]]
 z_index = 1
-scale = Vector2(3.96311, 3.96311)
+scale = Vector2(2.93295, 2.93295)
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_6r60f")

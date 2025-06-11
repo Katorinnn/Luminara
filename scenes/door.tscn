@@ -1,7 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://du6yfadqwqb7s"]
 
-[ext_resource type="Texture2D" uid="uid://bhbhvhgjcoust" path="res://Icons/doore.png" id="1_yylmd"]
-[ext_resource type="Script" path="res://scenes/portal.gd" id="2_urwtt"]
+[ext_resource type="Texture2D" uid="uid://bhbhvhgjcoust" path="res://assets/bgBtn/doore.png" id="1_yylmd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h1017"]
 size = Vector2(32, 90)
@@ -37,14 +36,32 @@ tracks/0/keys = {
 "values": [Vector2(1304, 709), Vector2(1304, 635)]
 }
 
+[sub_resource type="Animation" id="Animation_leges"]
+resource_name = "open_horizontal"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(680, 241), Vector2(679, 15), Vector2(598, 15)]
+}
+
+[sub_resource type="Animation" id="Animation_4in6s"]
+resource_name = "open_slide"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qrfrp"]
 _data = {
 "RESET": SubResource("Animation_xyoo6"),
-"open_door": SubResource("Animation_mrei8")
+"open_door": SubResource("Animation_mrei8"),
+"open_horizontal": SubResource("Animation_leges"),
+"open_slide": SubResource("Animation_4in6s")
 }
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvssg"]
-size = Vector2(32, 50)
 
 [node name="door" type="StaticBody2D" groups=["Door"]]
 z_index = 1
@@ -57,9 +74,44 @@ z_index = 3
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_h1017")
 
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(97, -26)
+texture = ExtResource("1_yylmd")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(33, -26)
+texture = ExtResource("1_yylmd")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 2
 position = Vector2(-0.5, 17.5)
+texture = ExtResource("1_yylmd")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(66, -26)
+texture = ExtResource("1_yylmd")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(97.5, 17)
+texture = ExtResource("1_yylmd")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(66, 17.5)
+texture = ExtResource("1_yylmd")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(33, 17.5)
+texture = ExtResource("1_yylmd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-0.5, -26.5)
 texture = ExtResource("1_yylmd")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -71,15 +123,5 @@ texture = ExtResource("1_yylmd")
 libraries = {
 "": SubResource("AnimationLibrary_qrfrp")
 }
-
-[node name="Area2D" type="Area2D" parent="." groups=["Portal"]]
-script = ExtResource("2_urwtt")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 89)
-shape = SubResource("RectangleShape2D_wvssg")
-
-[node name="Marker2D" type="Marker2D" parent="Area2D"]
-position = Vector2(0, 89)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcolld32uoscv"
-path="res://.godot/imported/button_rectangle_depth_gloss.png-b9597da242a30d0a267773bac8ed25eb.ctex"
+uid="uid://0vyvvy5kr1xo"
+path="res://.godot/imported/button_square_header_notch_rectangle.png-1258358ac3378f507a1537d9b8e01498.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bgBtn/button_rectangle_depth_gloss.png"
-dest_files=["res://.godot/imported/button_rectangle_depth_gloss.png-b9597da242a30d0a267773bac8ed25eb.ctex"]
+source_file="res://assets/UI/button_square_header_notch_rectangle.png"
+dest_files=["res://.godot/imported/button_square_header_notch_rectangle.png-1258358ac3378f507a1537d9b8e01498.ctex"]
 
 [params]
 

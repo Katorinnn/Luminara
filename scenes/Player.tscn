@@ -154,7 +154,6 @@ animations = [{
 size = Vector2(4, 17.5)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-z_index = 2
 position = Vector2(0, -16)
 collision_layer = 2
 collision_mask = 5

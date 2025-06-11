@@ -36,6 +36,7 @@ func show_completion_screen():
 
 	add_child(completion_instance)
 
+	# Format time and send it to the screen
 	var minutes = int(elapsed_time) / 60
 	var seconds = int(elapsed_time) % 60
 	var time_string = "%02d:%02d" % [minutes, seconds]

@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://03w5vd2yrcyx"]
+[gd_scene load_steps=7 format=3 uid="uid://03w5vd2yrcyx"]
 
-[ext_resource type="Script" path="res://scenes/resultMenu.gd" id="1_ef8cm"]
+[ext_resource type="Script" path="res://scripts/completion.gd" id="1_ef8cm"]
 [ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/fonts/DUNGRG__.TTF" id="1_monx1"]
 [ext_resource type="Texture2D" uid="uid://c1q0m4pbg7v5e" path="res://Icons/UI manager/return.png" id="2_7cs3f"]
 [ext_resource type="Texture2D" uid="uid://i7sv7hdr4m5f" path="res://Icons/UI manager/next.png" id="3_2lcx2"]
 [ext_resource type="Texture2D" uid="uid://duy4u7ywqq324" path="res://Icons/UI manager/home.png" id="4_uiimm"]
+[ext_resource type="PackedScene" uid="uid://dx62xypbrsc0t" path="res://scenes/SFX.tscn" id="6_0wxvf"]
 
-[node name="Level Result" type="CanvasLayer"]
+[node name="Result" type="CanvasLayer"]
 script = ExtResource("1_ef8cm")
 
 [node name="ui" type="ColorRect" parent="."]
@@ -94,6 +95,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 3
 texture_normal = ExtResource("4_uiimm")
 
+[node name="SFX" parent="." instance=ExtResource("6_0wxvf")]
+
 [connection signal="pressed" from="ui/GameCompleted/HBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="ui/GameCompleted/HBoxContainer/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="ui/GameCompleted/HBoxContainer/home" to="." method="_on_home_pressed"]
+
+[editable path="SFX"]

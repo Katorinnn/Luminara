@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhbhvhgjcoust"
-path="res://.godot/imported/doore.png-0a49c4173e0670798468e086902c7b84.ctex"
+uid="uid://clyn7sk2pf0b3"
+path="res://.godot/imported/bar_square_large.png-369ce8ed094b535c6efb2a1500398600.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Icons/doore.png"
-dest_files=["res://.godot/imported/doore.png-0a49c4173e0670798468e086902c7b84.ctex"]
+source_file="res://assets/UI/bar_square_large.png"
+dest_files=["res://.godot/imported/bar_square_large.png-369ce8ed094b535c6efb2a1500398600.ctex"]
 
 [params]
 

@@ -1,24 +1,58 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1yonsip48hnp"]
+[gd_scene load_steps=15 format=3 uid="uid://d1yonsip48hnp"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_p0avr"]
 [ext_resource type="Texture2D" uid="uid://dmdylaggenodd" path="res://assets/bgBtn/Background.png" id="1_pslup"]
-[ext_resource type="Texture2D" uid="uid://c65v65ffc0e7a" path="res://assets/bgBtn/button_rectangle_depth_gradient.png" id="2_1xbre"]
-[ext_resource type="Texture2D" uid="uid://2nunvmsc0w5w" path="res://assets/bgBtn/button_rectangle_depth_line.png" id="3_abrmt"]
-[ext_resource type="Texture2D" uid="uid://dcolld32uoscv" path="res://assets/bgBtn/button_rectangle_depth_gloss.png" id="4_cnu60"]
+[ext_resource type="PackedScene" uid="uid://dx62xypbrsc0t" path="res://scenes/SFX.tscn" id="5_8tpcn"]
 [ext_resource type="FontFile" uid="uid://cyxb012guiy5q" path="res://assets/fonts/DUNGRG__.TTF" id="5_cgy6h"]
 [ext_resource type="AudioStream" uid="uid://c6siscpjimrpr" path="res://assets/Audio/Known.wav" id="7_xxmh8"]
+
+[sub_resource type="Gradient" id="Gradient_jvxfy"]
+offsets = PackedFloat32Array(0.139344, 0.467213, 0.868852, 1)
+colors = PackedColorArray(0.65665, 0.65665, 0.65665, 0.874298, 0.810965, 0.810965, 0.810965, 0.763355, 1, 1, 1, 0.627451, 0.933333, 0.933333, 0.933333, 0.584314)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5n5en"]
+gradient = SubResource("Gradient_jvxfy")
+fill_from = Vector2(0.849462, 0.145161)
+fill_to = Vector2(0.155914, 0.193548)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13ifj"]
+texture = SubResource("GradientTexture2D_5n5en")
+
+[sub_resource type="Gradient" id="Gradient_c5fel"]
+offsets = PackedFloat32Array(0.106557, 0.622951)
+colors = PackedColorArray(1, 1, 1, 0.537255, 0.493545, 0.493546, 0.493546, 0.807843)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nona3"]
+gradient = SubResource("Gradient_c5fel")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3nwlg"]
+texture = SubResource("GradientTexture2D_nona3")
+
+[sub_resource type="Gradient" id="Gradient_epa40"]
+offsets = PackedFloat32Array(0.0327869, 0.42623, 0.786885)
+colors = PackedColorArray(1, 1, 1, 0.6, 0.906718, 0.906718, 0.906718, 0.556661, 0.858573, 0.858573, 0.858573, 0.534293)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hdj1h"]
+gradient = SubResource("Gradient_epa40")
+fill_from = Vector2(0.22043, 0.0322581)
+fill_to = Vector2(0.806452, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebpai"]
+texture = SubResource("GradientTexture2D_hdj1h")
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 460.0
-offset_bottom = 258.0
+offset_right = 471.0
+offset_bottom = 279.0
 scale = Vector2(2.80047, 2.80047)
 script = ExtResource("1_p0avr")
 
 [node name="Screenshot2025-05-27181652" type="Sprite2D" parent="."]
 modulate = Color(0.955418, 0.821443, 0.688981, 0.847059)
-self_modulate = Color(0.940708, 0.577581, 0.414446, 1)
+self_modulate = Color(0.178232, 0.061464, 0.00308937, 0.780392)
 position = Vector2(212, 127)
 scale = Vector2(1.59699, 1.76823)
 texture = ExtResource("1_pslup")
@@ -30,83 +64,44 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.8165
-offset_top = 5.26317
-offset_right = 145.184
-offset_bottom = 205.263
+offset_left = -48.6019
+offset_top = 2.76358
+offset_right = 335.398
+offset_bottom = 394.764
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.518827, 0.446835)
+scale = Vector2(0.281026, 0.213672)
 
-[node name="startBtn" type="TextureButton" parent="VBoxContainer"]
+[node name="startBtn" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxTexture_13ifj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3nwlg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebpai")
 button_mask = 5
-texture_normal = ExtResource("2_1xbre")
-texture_pressed = ExtResource("3_abrmt")
-texture_hover = ExtResource("4_cnu60")
+text = "Play"
 
-[node name="Label" type="Label" parent="VBoxContainer/startBtn"]
-layout_mode = 0
-offset_left = 72.9546
-offset_top = 18.3802
-offset_right = 112.955
-offset_bottom = 41.3802
-theme_override_colors/font_color = Color(0, 0, 0, 0.839216)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.686275)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-text = "Start
+[node name="optionBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxTexture_13ifj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3nwlg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebpai")
+text = "Option
 "
 
-[node name="optionBtn" type="TextureButton" parent="VBoxContainer"]
+[node name="exitBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_1xbre")
-texture_pressed = ExtResource("3_abrmt")
-texture_hover = ExtResource("4_cnu60")
-
-[node name="Label" type="Label" parent="VBoxContainer/optionBtn"]
-layout_mode = 0
-offset_left = 72.9546
-offset_top = 18.3802
-offset_right = 126.955
-offset_bottom = 41.3802
-theme_override_colors/font_color = Color(0, 0, 0, 0.839216)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.686275)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-text = "Option"
-
-[node name="exitBtn" type="TextureButton" parent="VBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("2_1xbre")
-texture_pressed = ExtResource("3_abrmt")
-texture_hover = ExtResource("4_cnu60")
-
-[node name="Label" type="Label" parent="VBoxContainer/exitBtn"]
-layout_mode = 0
-offset_left = 72.9546
-offset_top = 18.3802
-offset_right = 112.955
-offset_bottom = 41.3802
-theme_override_colors/font_color = Color(0, 0, 0, 0.839216)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.686275)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-text = "Quit"
-
-[node name="GameName3" type="Label" parent="."]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -99.6647
-offset_top = 51.777
-offset_right = 101.335
-offset_bottom = 136.777
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.615686, 0.615686, 0.615686, 1)
-theme_override_fonts/font = ExtResource("5_cgy6h")
-theme_override_font_sizes/font_size = 70
-text = "Luminara"
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxTexture_13ifj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3nwlg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebpai")
+text = "Quit Game
+"
 
 [node name="GameName2" type="Label" parent="."]
 texture_filter = 1
@@ -114,15 +109,15 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -99.3077
-offset_top = 50.3487
-offset_right = 101.692
-offset_bottom = 135.349
+offset_left = -97.1652
+offset_top = 49.2774
+offset_right = 103.835
+offset_bottom = 134.278
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.588235, 0.345098, 0.0745098, 0.682353)
+theme_override_colors/font_color = Color(0.70433, 0.622315, 0.639881, 0.682353)
 theme_override_fonts/font = ExtResource("5_cgy6h")
 theme_override_font_sizes/font_size = 70
-text = "Luminara"
+text = "Beam Me Out"
 
 [node name="GameName4" type="Label" parent="."]
 texture_filter = 1
@@ -137,11 +132,15 @@ offset_bottom = 131.778
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("5_cgy6h")
 theme_override_font_sizes/font_size = 70
-text = "Luminara"
+text = "Beam Me Out"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_xxmh8")
 
+[node name="SFX" parent="." instance=ExtResource("5_8tpcn")]
+
 [connection signal="pressed" from="VBoxContainer/startBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/optionBtn" to="." method="_on_option_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/exitBtn" to="." method="_on_exit_btn_pressed"]
+
+[editable path="SFX"]

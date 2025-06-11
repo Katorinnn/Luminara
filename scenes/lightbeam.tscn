@@ -12,3 +12,4 @@ target_position = Vector2(0, 28)
 [node name="Line2D" type="Line2D" parent="."]
 points = PackedVector2Array(-4, 0)
 width = 8.0
+default_color = Color(0.683077, 0.683077, 0.683077, 0.615686)

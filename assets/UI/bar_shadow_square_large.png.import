@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnmlg5p1rklj0"
-path="res://.godot/imported/Untitled design (2).png-b9b183fa1442ccb945a90d80d862b533.ctex"
+uid="uid://cl0vby0uhlpci"
+path="res://.godot/imported/bar_shadow_square_large.png-9160630764f39050b4cc1f5c5107deb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bgBtn/Untitled design (2).png"
-dest_files=["res://.godot/imported/Untitled design (2).png-b9b183fa1442ccb945a90d80d862b533.ctex"]
+source_file="res://assets/UI/bar_shadow_square_large.png"
+dest_files=["res://.godot/imported/bar_shadow_square_large.png-9160630764f39050b4cc1f5c5107deb2.ctex"]
 
 [params]
 
